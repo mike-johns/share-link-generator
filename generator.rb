@@ -16,9 +16,9 @@ def get_source
   source_acct = gets.chomp!
   if source_acct != ""
     if source_acct[0] == "@"
-      @source = "%20(from%20@#{source_acct.slice!(1..-1)})"
+      @source = "%20(@#{source_acct.slice!(1..-1)})"
     else
-      @source = "%20(from%20@#{source_acct})"
+      @source = "%20(@#{source_acct})"
     end
   else
     @source = ""
